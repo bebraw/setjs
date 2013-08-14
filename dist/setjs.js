@@ -9,7 +9,7 @@
         root.setjs = factory();
     }
 }(this, function() {
-/*! setjs - v0.1.0 - Juho Vepsalainen <bebraw@gmail.com> - MIT
+/*! setjs - v0.5.1 - Juho Vepsalainen <bebraw@gmail.com> - MIT
  - 2013-08-14 */
 // inspired by http://docs.python.org/2/library/sets.html
 function set() {
