@@ -25,14 +25,14 @@ function equals(a, b) {
 set.equals = equals;
 
 function contains(a, b) {
-    // needed because "in" takes prototype in count
-    // ("watch" gives false positive on gecko)
     if(b.constructor.name == 'Set') {
         var bKeys = Object.keys(b);
 
         return bKeys.filter(contains.bind(null, a)).length == bKeys.length;
     }
 
+    // needed because "in" takes prototype in count
+    // ("watch" gives false positive on gecko)
     return b in a && a.hasOwnProperty(b);
 }
 set.contains = contains;
