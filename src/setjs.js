@@ -8,7 +8,7 @@ function set() {
         arg = arguments[i];
 
         if(arg.constructor.name == 'Set') ret = union(ret, arg);
-        else ret[arg] = true;
+        else Object.defineProperty(ret, arg, { get: function() { return true; } });
     }
 
     return ret;

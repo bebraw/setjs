@@ -30,7 +30,7 @@ function tests() {
     assert(set.count(a) == 4, 'should be larger after adding');
 
     delete a[4];
-    assert(set.count(a) == 3, 'should be lesser after removal');
+    assert(set.count(a) == 4, 'true immutability, cannot delete');
 }
 
 function assert(s, msg) {
