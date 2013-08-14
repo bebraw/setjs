@@ -27,9 +27,8 @@ function tests() {
     assert(set.equals(set.symmetricDifference(b, a), set(1, 4)), 'should differ symmetrically');
 
     a[4] = true;
-    assert(set.count(a) == 4, 'should be larger after adding');
+    assert(set.count(a) == 3, 'true immutability, cannot add to set');
 
-    // TODO: figure out why this deletes (even though defineProperty is configured properly)
     delete a[4];
     assert(set.count(a) == 3, 'true immutability, cannot delete');
 }
