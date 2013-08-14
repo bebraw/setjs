@@ -1,10 +1,4 @@
 // inspired by http://docs.python.org/2/library/sets.html
-function addElem(set, key) {
-    Object.defineProperty(set, key, {
-        get: function() { return true; },
-        enumerable: true
-    });
-}
 function set() {
     function Set() {}
     var ret = new Set();
@@ -13,12 +7,28 @@ function set() {
     for(i = 0, len = arguments.length; i < len; i++) {
         arg = arguments[i];
 
-        if(arg.constructor.name == 'Set') Object.keys(arg).filter(function(key) { return !ret[key] }).forEach(function(key) { addElem(ret, key); });
+        if(arg.constructor.name == 'Set') Object.keys(arg).filter(
+            not(prop.bind(undefined, ret))
+        ).forEach(addElem.bind(undefined, ret));
         else if(!(arg in ret)) addElem(ret, arg);
     }
-    Object.preventExtensions(ret);
 
-    return ret;
+    return Object.preventExtensions(ret);
+}
+
+function addElem(set, key) {
+    Object.defineProperty(set, key, {
+        get: id.bind(undefined, true),
+        enumerable: true
+    });
+}
+
+function prop(o, v) {
+    return o[v];
+}
+
+function id(a) {
+    return a;
 }
 
 function count(a) {
