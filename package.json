@@ -2,6 +2,9 @@
   "name": "setjs",
   "description": "Set data structure",
   "author": "Juho Vepsalainen <bebraw@gmail.com>",
+  "contributors": [
+    "David Ellis <d.f.ellis@ieee.org"
+  ],
   "version": "0.5.1",
   "devDependencies": {
     "grunt": "0.4.1",
