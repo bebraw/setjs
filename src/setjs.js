@@ -1,4 +1,10 @@
 // inspired by http://docs.python.org/2/library/sets.html
+function addElem(set, key) {
+    Object.defineProperty(set, key, {
+        get: function() { return true; },
+        enumerable: true
+    });
+}
 function set() {
     function Set() {}
     var ret = new Set();
@@ -7,11 +13,10 @@ function set() {
     for(i = 0, len = arguments.length; i < len; i++) {
         arg = arguments[i];
 
-        if(arg.constructor.name == 'Set') ret = union(ret, arg);
-        else if(!(arg in ret)) Object.defineProperty(ret, arg, {
-            enumerable: true
-        });
+        if(arg.constructor.name == 'Set') Object.keys(arg).filter(function(key) { return !ret[key] }).forEach(function(key) { addElem(ret, key); });
+        else if(!(arg in ret)) addElem(ret, arg);
     }
+    Object.preventExtensions(ret);
 
     return ret;
 }
@@ -69,7 +74,7 @@ set.difference = difference;
 
 function setKernel(check) {
     return function() {
-        var ret = set();
+        var ret = {};
         var args = arguments;
         var a = args[0];
 
@@ -87,7 +92,7 @@ function setKernel(check) {
             if(match) ret[v] = true;
         });
 
-        return ret;
+        return set.apply(null, Object.keys(ret));
     };
 }
 
