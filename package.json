@@ -5,7 +5,7 @@
   "contributors": [
     "David Ellis <d.f.ellis@ieee.org"
   ],
-  "version": "0.5.1",
+  "version": "0.6.0",
   "devDependencies": {
     "grunt": "0.4.1",
     "grunt-contrib-watch": "0.4.4",
