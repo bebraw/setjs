@@ -18,7 +18,7 @@ set.symmetricDifference(a, b); // {3, 5}
 ```
 
 The functions above may be used to perform various manipulations on sets. Note that due to the underlying structure (Object) you may actually mutate a set using `delete` and assignment (ie. `a['4'] = true;`, the value can be anything).
-.
+
 ## License
 
 MIT.
