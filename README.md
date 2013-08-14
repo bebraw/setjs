@@ -21,6 +21,10 @@ set.symmetricDifference(a, b); // {3, 5}
 
 The functions above may be used to perform various manipulations on sets.
 
+## Contributors
+
+* [David Ellis](https://github.com/dfellis) - Made library truly immutable.
+
 ## License
 
 MIT.
