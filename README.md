@@ -1,3 +1,5 @@
+[![build status](https://secure.travis-ci.org/bebraw/setjs.png)](http://travis-ci.org/bebraw/setjs)
+
 # setjs - Set data structure for JavaScript
 
 `setjs` implements a a Set API inspired by [Python](http://docs.python.org/2/library/stdtypes.html#set). There are some differences, though. The biggest difference is that the API is immutable by design. There is a basic `set` structure and functions that operate upon it. Consider the API below:
