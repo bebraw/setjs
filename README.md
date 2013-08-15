@@ -7,6 +7,7 @@
 ```js
 var a = set(4, 3, 4, 3); // set accepts arbitrary amount of items and may be empty
 var b = set(4, 5);
+var c = set(b, 6); // set accepts sets too. this results in {4, 5, 6}
 
 set.count(a); // 2
 set.contains(a, 3); // true
