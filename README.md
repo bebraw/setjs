@@ -1,4 +1,4 @@
-[![build status](https://secure.travis-ci.org/bebraw/setjs.png)](http://travis-ci.org/bebraw/setjs)
+ [![NPM version](https://badge.fury.io/js/setjs.png)](http://badge.fury.io/js/setjs) [![Dependency Status](https://gemnasium.com/bebraw/setjs.png)](https://gemnasium.com/bebraw/setjs) [![build status](https://secure.travis-ci.org/bebraw/setjs.png)](http://travis-ci.org/bebraw/setjs)
 
 # setjs - Set data structure for JavaScript
 
